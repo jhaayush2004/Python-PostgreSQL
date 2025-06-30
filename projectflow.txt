@@ -4,4 +4,31 @@
    #its required for most python and postgresql framework
    #its actively maintained
    #designed for heavily multi threaded application
-3.
+3. open psql(SQL Shell) and write commands:
+   \l --> list all databses created
+   CREATE DATABASE master ;
+   DELETE DATABASE master ;
+   
+4. CREATE DATABASE sales;
+   \c sales  ---> You are now connected to database "sales" as user "postgres".
+5. copy and paste 
+CREATE TABLE customers(
+   customer_id SERIAL PRIMARY KEY;
+   first_name VARCHAR(255) NOT NULL;
+   last_name VARCHAR(255) NOT NULL;
+   email_address VARCHAR(255) NULL;
+   phone_number INTEGER NOT NULL;
+   number_of_complaints INTEGER NULL;
+);
+to psql directly and ENTER.
+
+6. /d -- > to get details of tavle
+output:
+ \d
+                    List of relations
+ Schema |           Name            |   Type   |  Owner
+--------+---------------------------+----------+----------
+ public | customers                 | table    | postgres
+ public | customers_customer_id_seq | sequence | postgres
+(2 rows)
+
